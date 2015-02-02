@@ -1,2 +1,2 @@
 # trailtask
-wordpress plugin
+wordpress plugin thats creates the forms for creating pages.
