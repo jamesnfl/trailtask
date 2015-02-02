@@ -7,26 +7,15 @@ Version: 1.0
 Author: james
 
 */
-if (!class_exists("wp_add_page_creator")) {
-	class wp_add_page_creator{
-		//the constructor that initializes the class
-		function wp_add_page_creator() {
-		
-		}
-	}
-	
-	//initialize the class to a variable
-	$wp_addvar = new wp_add_page_creator();
+
 	
 	//Actions and Filters	
-	if (isset($wp_addvar)) {
 		//Add Actions
 		add_action('admin_menu', 'wp_add_page');
 		if(isset($_GET['page'])&&$_GET['page']=='wp_add_page'){
 			add_action('admin_print_scripts', 'wp_add_script');
 			add_action('admin_print_styles', 'wp_add_style');
 		}
-	}
 	
 	function wp_add_page(){
 		//add the options page for this plugin
@@ -47,5 +36,4 @@ if (!class_exists("wp_add_page_creator")) {
 	{
 	 require( dirname( __FILE__ ) . '/add_page.php' );
 	}
-}
 ?>
