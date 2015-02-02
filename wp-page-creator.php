@@ -1,7 +1,6 @@
 <?php
 /*
 Plugin Name: Wordpress Page creator
-Plugin URI: wp_page
 Description: Creates New page panel from where admin can add new pages.
 Version: 1.0
 Author: james
