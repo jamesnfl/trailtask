@@ -1,11 +1,10 @@
 <?php
 /*
-Plugin Name: wp Page 
+Plugin Name: Wordpress Page creator
 Plugin URI: wp_page
-Description: site.
+Description: Creates New page panel from where admin can add new pages.
 Version: 1.0
 Author: james
-Author URI: 
 
 */
 if (!class_exists("wp_add_page_creator")) {
@@ -35,12 +34,12 @@ if (!class_exists("wp_add_page_creator")) {
 	}
 	
 	function wp_add_script(){
-		wp_register_script('wp-js', WP_PLUGIN_URL.'/wp-page-creator/my-script.js', array('jquery'));
+		wp_register_script('wp-js', WP_PLUGIN_URL.'/wp-page-creator/wp-page-script.js', array('jquery'));
 		wp_enqueue_script('wp-js');
 	}
 	
 	function wp_add_style(){
-		wp_register_style('wp-css',WP_PLUGIN_URL.'/wp-page-creator/my-style.css');
+		wp_register_style('wp-css',WP_PLUGIN_URL.'/wp-page-creator/wp-page-style.css');
 		wp_enqueue_style('wp-css');
 	}
 	
