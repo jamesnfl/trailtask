@@ -7,7 +7,10 @@ Author: james
 
 */
 
-	
+	    define('WP_PAGE_PLUGIN_DIR', dirname( __FILE__ ));
+		define('WP_PAGE_PLUGIN_FILE',__FILE__);
+		define('WP_PAGE_PLUGIN_URL',plugins_url( '' , __FILE__ ));
+
 	//Actions and Filters	
 		//Add Actions
 		add_action('admin_menu', 'wp_add_page');
@@ -22,12 +25,12 @@ Author: james
 	}
 	
 	function wp_add_script(){
-		wp_register_script('wp-js', WP_PLUGIN_URL.'/wp-page-creator/wp-page-script.js', array('jquery'));
+		wp_register_script('wp-js', WP_PAGE_PLUGIN_URL.'/wp-page-script.js', array('jquery'));
 		wp_enqueue_script('wp-js');
 	}
 	
 	function wp_add_style(){
-		wp_register_style('wp-css',WP_PLUGIN_URL.'/wp-page-creator/wp-page-style.css');
+		wp_register_style('wp-css',WP_PAGE_PLUGIN_URL.'/wp-page-style.css');
 		wp_enqueue_style('wp-css');
 	}
 	
