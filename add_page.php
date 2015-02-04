@@ -24,8 +24,6 @@
 						$pcontent = '';
 						$pcontent = str_ireplace('[pagetitle]','<h1>' . htmlentities($rres[5]) . '</h1>',$_POST['wp-pages-content']);
 						$url = $_POST['slug'];
-						echo $pcontent;
-						echo $url;
 						
 						$params = array( 
 							'post_type' => 'page',
@@ -51,7 +49,7 @@
 		?>
 		<div class="wp_page_wrap">
 			<?php if(isset($_GET['saved']) && $_GET['saved']=='1'){ ?>
-				<div id="setting-error-settings_updated" class="updated settings-error"><p><strong> submitted successfully! </strong></p></div>
+				<div id="setting-error-settings_updated" class="updated settings-error"><p><strong> Page Created successfully! </strong></p></div>
 			<?php } ?>
 			<h3>Add New Page</h3>
 			<table>
